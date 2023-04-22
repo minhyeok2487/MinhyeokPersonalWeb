@@ -9,8 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- 제이쿼리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 그래프 그리기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/lostark.css">
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Minhyeok Personal Web</title>
@@ -50,9 +53,9 @@
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="">
+                    <a href="/IGDB">
                         <i class="bx bx-bar-chart-alt-2 icon"></i>
-                        <span class="text nav-text">Chart</span>
+                        <span class="text nav-text">IGDB</span>
                     </a>
                 </li>
                 <li class="nav-link">

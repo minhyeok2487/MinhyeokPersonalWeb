@@ -40,5 +40,14 @@
         <p>재련재료 데이터 자정에 API로 불러와서 DB에 저장</p>
         <p>(기존에 데이터가 있으면 데이터 갱신)</p>
     </div>
+    <div class="dashboard text-box">
+        <strong>2023.04.16 IGDB 작업</strong>
+        <p>id 여러개 입력시(엑셀상 id 세로로 드래그) => 여러개 열림</p>
+        <p>Related Content 크롤링 => 실패</p>
+    </div>
+    <div class="dashboard text-box">
+        <strong>2023.04.22 로스트아크 작업</strong>
+        <p>일일컨텐츠 수확 비교 테이블 출력</p>
+    </div>
 </div>
 <%@include file="common/footer.jsp" %>

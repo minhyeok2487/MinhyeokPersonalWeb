@@ -31,7 +31,8 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	implementation 'org.mariadb.jdbc:mariadb-java-client:3.1.2'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-
+	implementation 'org.jsoup:jsoup:1.15.3'
+	implementation 'org.seleniumhq.selenium:selenium-java:4.4.0'
 }
 
 tasks.named('test') {
