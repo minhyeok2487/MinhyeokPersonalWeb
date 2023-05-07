@@ -48,6 +48,7 @@
     <div class="dashboard text-box">
         <strong>2023.04.22 로스트아크 작업</strong>
         <p>일일컨텐츠 수확 비교 테이블 출력</p>
+        <p>jsp는 jar배포를 지원하고 있지 않아 다른 템플릿 엔진으로 바꿔야함...</p>
     </div>
 </div>
 <%@include file="common/footer.jsp" %>

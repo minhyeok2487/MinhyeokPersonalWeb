@@ -212,6 +212,28 @@ body.dark .sidebar li a:hover .text {
 	justify-content: space-between;
 }
 
+.menu-bar .menu-links .nav-dropdown {
+	margin-left: 30px;
+	background: var(--toggle-color);
+	border-radius: 6px;
+	transition: var(--tran-05);
+}
+
+.nav-dropdown li {
+	height: 40px;
+}
+
+.nav-dropdown a {
+	padding-left: 0;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.nav-dropdown li .icon {
+	min-width: 30px;
+	font-size: 17px;
+}
+
 .menu-bar .mode {
 	position: relative;
 	border-radius: 6px;

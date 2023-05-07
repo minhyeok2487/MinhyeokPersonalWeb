@@ -25,4 +25,9 @@ public class RestaurantController {
 		//model.addAttribute("positions", positions);
 		return "restaurant/restaurantIndex";
 	}
+
+	@GetMapping("/restaurant/seohyunData")
+	public String seohyunData(Model model) {
+		return "restaurant/seohyunData";
+	}
 }

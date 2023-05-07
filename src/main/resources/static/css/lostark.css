@@ -59,3 +59,27 @@
 body.dark .lostark-warp .lostark-table-wrap {
 	color: var(--text-color);
 }
+
+.lostark .lostark-character {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap : 10px;
+}
+
+.lostark-character .lostark-character-wrap {
+}
+
+.lostark-character-wrap .lostark-character-image img {
+	border-radius: 20px;
+	width: 180px;
+	height: auto;
+}
+
+.lostark-character-wrap .lostark-character-textbox {
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 10px;
+	color: #FFFFFF;
+	padding: 5px;
+}

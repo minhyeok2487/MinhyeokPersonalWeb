@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
@@ -9,11 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- 제이쿼리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- 그래프 그리기 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/lostark.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/lostark.css">
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Minhyeok Personal Web</title>
@@ -23,7 +21,7 @@
     <header>
         <div class="image-text">
 				<span class="image">
-					<img src="resources/logo.png" alt="logo">
+					<img src="../resources/logo.png" alt="logo">
 				</span>
 
             <div class="text header-text">
@@ -41,17 +39,34 @@
             </li>
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a href="/lostark">
-                        <img class="img-icon" src="resources/lostark_icon.jpeg" alt="lostark_icon">
+                    <a href="/lostark" class="nav-link-item">
+                        <img class="img-icon" src="../resources/lostark_icon.jpeg" alt="lostark_icon">
                         <span class="text nav-text">로스트아크</span>
                     </a>
                 </li>
+                <div class="nav-dropdown">
+                    <li>
+                        <a href="/lostark/character" class="nav-link-item">
+                            <i class='bx bx-right-arrow icon'></i>
+                            <span class="text nav-text">내 캐릭터</span>
+                        </a>
+                    </li>
+                </div>
+
                 <li class="nav-link">
                     <a href="/restaurant">
                         <i class='bx bx-food-menu icon'></i>
                         <span class="text nav-text">점심식사</span>
                     </a>
                 </li>
+                <div class="nav-dropdown">
+                    <li>
+                        <a href="/restaurant" class="nav-link-item">
+                            <i class='bx bx-data icon'></i>
+                            <span class="text nav-text">서현 데이터</span>
+                        </a>
+                    </li>
+                </div>
                 <li class="nav-link">
                     <a href="/IGDB">
                         <i class="bx bx-bar-chart-alt-2 icon"></i>
