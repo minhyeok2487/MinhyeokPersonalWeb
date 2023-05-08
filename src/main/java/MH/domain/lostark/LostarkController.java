@@ -62,6 +62,7 @@ public class LostarkController {
         characters.sort(itemMaxLevelComparator.reversed());
         model.addAttribute("characters", characters);
         model.addAttribute("mainCharacter", mainCharacter);
+        model.addAttribute("mainServer", mainServer);
         return "lostark/lostarkCharacter";
     }
 

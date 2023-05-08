@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/default_layout">
+<th:block layout:fragment="content">
+    <div class="text">로스트아크 > 내 캐릭터(${mainServer} - ${mainCharacter})</div>
+    <div class="lostark wrap">
+        <div class="lostark-character">
+            <div th:each="character : ${characters}" class="lostark-character-wrap">
+                <div class="lostark-character-image">
+                    <img th:src="${character.characterImage}">
+                </div>
+                <div class="lostark-character-text">
+                    <div class="lostark-character-textbox" style="background: #695CFE;">
+                        <p th:text="${character.characterName}"></p>
+                        <p>캐릭터 클래스 : <span th:text="${character.characterClassName}"></span></p>
+                        <p>아이템 레벨 : <span th:text="${character.itemMaxLevel}"></span></p>
+                    </div>
+                    <div class="lostark-character-textbox" style="background: #FA8072;">
+                        <p>카오스 던전 : <span th:text="${character.chaosName}"></span></p>
+                        <p>가디언 토벌 : <span th:text="${character.guardianName}"></span></p>
+                        <p>카오스 던전 휴게 : 개발중</p>
+                        <p>가디언 토벌 휴게 : 개발중</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

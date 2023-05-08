@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/default_layout">
+<th:block layout:fragment="content">
+    <div class="text">로스트아크</div>
+    <div class="lostark wrap">
+        <div class="lostark-wrap">
+            <div class="lostark-wrap text-box">
+                <strong>재련재료 데이터</strong><br>
+                <p>6시간 간격으로 재련재료 데이터 자동 저장</p>
+            </div>
+            <div class="lostark-table-wrap">
+                <table class="lostark-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">구분</th>
+                        <th scope="col">묶음</th>
+                        <th scope="col">전일 평균가</th>
+                        <th scope="col">현재 가격</th>
+                        <th scope="col">최근 최저가</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="marketItem : ${marketItems}" th:id="${marketItem.id}">
+                        <th scope="row"><img th:src="${marketItem.icon}" th:alt="${marketItem.name}"></th>
+                        <td th:text="${marketItem.name}"></td>
+                        <td th:text="${marketItem.grade}"></td>
+                        <td th:text="${marketItem.bundleCount}"></td>
+                        <td th:text="${marketItem.YDayAvgPrice}"></td>
+                        <td th:text="${marketItem.recentPrice}"></td>
+                        <td th:text="${marketItem.currentMinPrice}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="lostark-wrap">
+            <div class="lostark-wrap text-box">
+                <strong>일일컨텐츠 수익</strong>
+                <p>카오스 던전 : 파괴석, 수호석, 보석, 골드(골드&보스방)</p>
+                <p>가디언 토벌 : 파괴석, 수호석, 돌파석</p>
+            </div>
+            <div class="lostark-table-wrap">
+                <table class="lostark-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">레벨</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">분류</th>
+                        <th scope="col">1수 수익</th>
+                        <th scope="col">2수 수익(휴게 1수)</th>
+                        <th scope="col">휴게 2수 수익</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="contentAvg : ${contentAvg}">
+                        <th scope="row" th:text="${contentAvg.level}"></th>
+                        <td th:text="${contentAvg.name}"></td>
+                        <td th:text="${contentAvg.category}"></td>
+                        <td th:text="${contentAvg.availablePrice}"></td>
+                        <td th:text="${contentAvg.availablePrice * 2}"></td>
+                        <td th:text="${contentAvg.availablePrice * 4}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="lostark-wrap">
+            <div class="lostark-wrap text-box">
+                <strong>일일컨텐츠 수익</strong>
+                <p>카오스 던전 : 파괴석, 수호석, 보석, 골드(골드&보스방)</p>
+                <p>가디언 토벌 : 파괴석, 수호석, 돌파석</p>
+            </div>
+            <div class="lostark-table-wrap">
+                <table class="lostark-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">레벨</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">분류</th>
+                        <th scope="col">수익</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="contentAvgTotal : ${contentAvgTotal}">
+                        <th scope="row" th:text="${contentAvgTotal.level}"></th>
+                        <td th:text="${contentAvgTotal.name}"></td>
+                        <td th:text="${contentAvgTotal.category}"></td>
+                        <td th:text="${contentAvgTotal.availablePrice}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>
